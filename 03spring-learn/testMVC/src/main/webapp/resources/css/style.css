@@ -1,0 +1,15 @@
+html,body { background: #121212; color: white}
+table{
+    text-align: center;
+}
+#database {display: none;}
+input { margin: 0 10px; color: black}
+.gender{
+    padding: 0 10px;
+    text-align: left;
+}
+.wrapper{
+    max-width:  600px;
+    margin-left:auto;
+    margin-right:auto;
+}

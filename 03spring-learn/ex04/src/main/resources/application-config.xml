@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd">
+
+<!-- 어노테이션 -->
+<context:component-scan base-package="com.multicampus.ex01"/>
+
+
+<bean id="hellolog" class="com.multicampus.ex01.HelloLog"/>
+<bean id="performanceAspect" class="com.multicampus.ex01.PerformanceAspect"></bean>
+
+<aop:config>
+	<aop:pointcut id="hello" expression="execution(* com.multicampus..HelloService.sayHello(..))" />
+	<aop:aspect ref="hellolog">
+		<aop:before pointcut-ref="hello" method="log" />
+	</aop:aspect>
+	<aop:aspect ref="performanceAspect">
+		<aop:around pointcut-ref="hello" method="trace"/>
+	</aop:aspect>
+</aop:config>
+	
+
+<context:property-placeholder location="classpath:database/jdbc.properties" />
+
+<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+	<property name="driverClassName" value="${jdbc.driverClassName}" />
+	<property name="url" value="${jdbc.url}" />
+	<property name="username" value="${jdbc.username}" />
+	<property name="password" value="${jdbc.password}" />
+</bean>
+
+<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+	<property name="dataSource" ref="dataSource" />
+</bean>
+
+<!-- 
+
+<bean id ="helloService" class="com.multicampus.ex01.HelloService"/>
+
+<bean id="helloController" class="com.multicampus.ex01.HelloController">
+	<property name="helloService" ref="helloService"/>
+</bean>
+
+ -->
+
+<!--bean id="helloController" class="com.multicampus.ex01.HelloController">
+	<constructor-arg ref="helloService"/>
+</bean-->
+
+
+
+</beans>

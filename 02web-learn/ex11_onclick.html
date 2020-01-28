@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    #b1 {background: lightyellow;}
+    #b2 {background: lightgrey;}
+    </style>
+    </head>
+<body>
+    <img id="light" src="./image/lightoff.png">
+    <button id="b1" onclick="changeOn()" >전구켜기</button>
+    <button id="b2" onclick="changeOff()" >전구끄기</button>
+    <script>
+        function changeOff() {
+            var tag1 = document.getElementById('light');
+            var switchOn = document.getElementById('b1');
+            var switchOff = document.getElementById('b2');
+            switchOn.style.background = "lightyellow";
+            switchOff.style.background = "lightgray";
+            tag1.src = './image/lightoff.png';
+        }
+        function changeOn() {
+            var tag1 = document.getElementById('light');
+            var switchOn = document.getElementById('b1');
+            var switchOff = document.getElementById('b2');
+            switchOn.style.background = "lightgrey";
+            switchOff.style.background = "lightyellow";
+            tag1.src = './image/lighton.png';
+        }
+            </script>
+</body>
+</html>

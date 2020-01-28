@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <table style="border:1px">
+        <caption> 표 제목 </caption>
+        <tr>
+            <td></td>
+            <td>열제목1</td>
+            <td>열제목2</td>
+            <td>열제목3</td>
+        </tr>
+        <tr>
+            <td>행제목1</td>
+            <td>셀1</td>
+            <td>셀2</td>
+            <td>셀3</td>
+        </tr>
+        <tr>
+            <td>행제목2</td>
+            <td>셀1</td>
+            <td>셀2</td>
+            <td>셀3</td>
+        </tr>
+    </table>
+
+    <table>
+        <caption> 제목 </caption>
+        <thead>
+            <tr>
+                <th>1열제목</th>
+                <th>2열제목</th>
+                <th>3열제목</th>
+            <tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td> 푸터 1</td>
+                <td> 푸터 2</td>
+                <td> 푸터 3</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>1행 1열내용</td>
+                <td> 1행 2열 내용</td>
+                <td> 1행 3열 내용</td>
+            </tr>
+            <tr>
+                <td>2행 1열내용</td>
+                <td> 2행 2열 내용</td>
+                <td> 2행 3열 내용</td>
+            </tr>
+            <tr>
+                <td>3행 1열내용</td>
+                <td> 3행 2열 내용</td>
+                <td> 3행 3열 내용</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <table border=1> <caption> 표 제목2 </caption>
+        <tr><td></td><td>열제목1</td><td>열제목2</td><td>열제목3</td></tr>
+        <tr><td>행제목1</td><td rowspan=2>셀1</td><td>셀2</td><td>셀3</td></tr>
+        <tr><td>행제목2</td><td>셀2</td><td>셀3</td></tr>
+        <tr><td>행제목3</td><td>셀1</td><td colspan=2>셀2</td></tr>
+    </table>
+
+</body>
+
+</html>

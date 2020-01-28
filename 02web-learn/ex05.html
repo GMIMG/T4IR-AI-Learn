@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <style>
+        html,body { background: #121212; color: white}
+    table{
+        text-align: center;
+        
+    }
+    input { margin: 0 10px; color: black}
+    .gender{
+        padding: 0 10px;
+        text-align: left;
+    }
+    .wrapper{
+        max-width:  600px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+    <h1>Customer Management</h1>
+    <img src="customers.png" width="100%" alt="이미지">
+    <table border=2> 
+        <caption>  </caption>
+        <tr>
+            <td>&nbsp;Index&nbsp;</td>
+            <td>Name</td>
+            <td>Gender</td>
+            <td>Email</td>
+            <td>Birth</td>
+        </tr>
+        <tr>
+            <td>-1</td>
+            <td><input type = "text" name = "name" size = "8"></td>
+            <td class="gender">
+                <input type = "radio" name = "gender"> female <br>
+                <input type = "radio" name = "gender"> male
+            </td>
+            <td><input type = "text" name = "email" size = "20"></td>
+            <td><input type = "text" name = "birth" size = "6"></td>
+        </tr>
+    </table>
+    <br>
+    <input type = "text" name = "find" size = "2" value="index">
+    <button type="button" class="btn btn-default">찾아가기</button>
+    <button type="button" class="btn btn-info">이전</button>
+    <button type="button" class="btn btn-info">다음</button>
+    <button type="button" class="btn btn-warning">수정</button>
+    <button type="button" class="btn btn-danger">삭제</button>
+
+
+
+
+    <br><br><br>
+
+    <table border=2> 
+        <caption> 생성테이블 </caption>
+        <tr>
+            <td>Name</td>
+            <td>Gender</td>
+            <td>Email</td>
+            <td>Birth</td>
+        </tr>
+        <tr>
+            <td><input type = "text" name = "inputname" size = "8"></td>
+            <td class="gender">
+                <input type = "radio" name = "inputgender"> female <br>
+                <input type = "radio" name = "inputgender"> male
+            </td>
+            <td><input type = "text" name = "inputemail" size = "20"></td>
+            <td><input type = "text" name = "inputbirth" size = "6"></td>
+        </tr>
+    </table>
+    <br>
+    <button type="button" class="btn btn-primary">생성</button>
+    <button type="button" class="btn btn-success">저장</button>
+</div>
+</body>
+</html>

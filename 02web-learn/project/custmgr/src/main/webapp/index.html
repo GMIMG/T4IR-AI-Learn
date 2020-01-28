@@ -1,0 +1,120 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+   <title> 고객관리 </title>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <style>
+      html {
+         background: #121212;
+         color: fff;
+      }
+
+      #header {
+         background: #121212;
+         color: white;
+         height: 60px;
+         line-height: 60px;
+         font-size: 30px;
+      }
+      
+      #menu {
+         background: #343434;
+         height: 40px;
+         text-align: right;
+         padding-right: 100px;
+         line-height: 40px;
+      }
+
+      .btn {
+         background: none;
+         color: white;
+         border: none;
+      }
+
+      #content,
+      #side-right {
+         min-height: 700px;
+      }
+
+      #side-right {
+         background: #121212;
+         color: #fff;
+         border-left: 1px solid #aaaaaa;
+         padding-top: 20px;
+
+      }
+
+      #side-right li {
+         padding-top: 10px;
+      }
+
+      #footer {
+         background: #343434;
+         clear: both;
+         height: 30px;
+         line-height: 30px;
+      }
+
+      #header,
+      #footer {
+         text-align: center;
+      }
+   </style>
+</head>
+
+<body>
+   <div id="container-fluid">
+      <div id="header">
+         <h1>고객관리</h1>
+      </div>
+      <nav id="menu">
+         <!-- Single button -->
+         <a href="./index.html"><button type="button" class="btn btn-default">Home</button></a>
+
+         <div class="btn-group">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+               검색 <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+               <li><a href="#">이름으로 검색</a></li>
+               <li><a href="#">성별로 검색</a></li>
+               <li><a href="#">이메일로 검색</a></li>
+            </ul>
+         </div>
+         <div class="btn-group">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+               관리 <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+               <li><a href="#">새로운 리스트 생성</a></li>
+               <li class="divider"></li>
+               <li><a href="#">초기화</a></li>
+            </ul>
+         </div>
+      </nav>
+      <div class="row">
+         <div id="content" class="col-md-9 embed-responsive">
+            <iframe src="1custMgr.html" name="f1" seamless></iframe>
+         </div>
+         <div id="side-right" class="col-md-3">
+            <ul>
+               사용방법
+               <li> 생성 </li> 하하하하
+               <li> 수정 </li>
+               <li class="delete-text"> 삭제 </li>
+            </ul>
+         </div>
+      </div>
+      <div id="footer"> 문의 : 02-0000-0000, &nbsp;&nbsp; &copyright; &nbsp;웹-페이지 개발자 </div>
+   </div>
+
+
+
+
+</body>
+
+</html>

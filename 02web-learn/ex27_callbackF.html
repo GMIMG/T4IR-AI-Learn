@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function f1(f2,n) {
+            document.write('콜백함수를 '+n+'번 호출함!' + '<br>');
+            for ( i=0; i<n; i++) f2();
+        }
+        
+        var f3 = function () {
+            document.write('welcome to HTML5! <br>');
+        }
+
+        f1(f3,5);
+
+        document.write('<hr>');
+        f1( function() {
+            document.write('welcome to Javascript! <br>');
+        }, 5);
+    </script>
+</body>
+</html>

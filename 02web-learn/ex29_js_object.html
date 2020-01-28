@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    var obj = new Object();
+    obj.name = "조민규"; obj.major = "건축공학";
+
+    document.write("obj의 constructor: ");
+    document.write(obj.constructor + "<br>");
+    
+    document.write("obj의 toString(): ");
+    document.write(obj.toString());
+    document.write("<br>");
+
+    obj.toString = function() {
+        document.write("{ name: "+ this.name + ", major: " +this.major + "}");
+    };
+    document.write("obj의 toString(): ");
+    obj.toString();//재정의
+    </script>
+</body>
+</html>

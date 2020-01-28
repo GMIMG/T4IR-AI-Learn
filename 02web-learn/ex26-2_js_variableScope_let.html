@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a="globalA", b="globalB", c="globalC" ;
+        function f1() {
+            let b="localB";
+            let d="localD";
+            document.write("함수 f1() 내부에서 출력<br>");
+            document.write("a=" + a + "<br>");
+            document.write("b=" + b + "<br>");
+            document.write("this.b=" + this.b + "<br>");
+            document.write("c=" + c + "<br>");
+            document.write("d=" + d + "<br><br>");
+        }
+        f1();
+        document.write("함수 f1() 외부에서 출력 <br>");
+        document.write("a=" + a + "<br>");
+        document.write("b=" + b + "<br>");
+        document.write("this.b=" + this.b + "<br>");
+        document.write("c=" + c + "<br>");
+        document.write("d=" + d + "<br><br>");
+            
+    </script>
+</body>
+</html>

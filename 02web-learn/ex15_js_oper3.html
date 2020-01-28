@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>자바스크립트 연산자</title>
+    <style>
+    td {
+        width : 100px;
+        text-align : center;
+    }
+    </style>
+</head>
+<body>
+    <h3> 성적처리 결과 </h3> <hr>
+    <script>
+        let kor = 92, math = 77, eng = 88;
+        let total, avg;
+
+        total = kor + math + eng ; avg = total / 3;
+        document.write('<table border=1>');
+        document.write('<tr> <td>국어</td><td>' + kor + '</td></tr>');
+        document.write('<tr> <td>수학</td><td>' + math + '</td></tr>');
+        document.write('<tr> <td>영어</td><td>' + eng + '</td></tr>');
+        document.write('<tr> <td>총점</td><td>' + total + '</td></tr>');
+        document.write('<tr> <td>평균</td><td>' + avr + '</td></tr>');
+        document.write('</table>');
+    </script>
+</body>
+</html>
